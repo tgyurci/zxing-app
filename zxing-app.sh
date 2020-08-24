@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec java -jar zxing-app.jar
+exec java -jar zxing-app.jar "$@"
