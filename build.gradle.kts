@@ -16,3 +16,10 @@ application {
 dependencies {
     implementation("com.google.zxing:javase:$version")
 }
+
+tasks {
+    shadowJar {
+        isPreserveFileTimestamps = false
+        isReproducibleFileOrder = true
+    }
+}
