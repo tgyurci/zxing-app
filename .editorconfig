@@ -8,9 +8,3 @@ indent_size = 4
 indent_style = space
 tab_width = 4
 ij_continuation_indent_size = 4
-
-[*.yaml]
-indent_size = 2
-indent_style = space
-tab_width = 2
-ij_continuation_indent_size = 2
