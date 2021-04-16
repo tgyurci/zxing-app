@@ -1,4 +1,4 @@
-FROM gradle:7.0-jre AS zxing-app
+FROM gradle:7.0-jre AS zxing-app-build
 
 COPY . /zxing-app-build
 WORKDIR /zxing-app-build
