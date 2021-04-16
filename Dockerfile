@@ -1,11 +1,11 @@
-FROM gradle:6.6.1-jre AS zxing-app-build
+FROM gradle:7.0-jre AS zxing-app
 
 COPY . /zxing-app-build
 WORKDIR /zxing-app-build
 RUN gradle --no-daemon --info build
 
 
-FROM openjdk:11.0.8-jre-slim AS zxing-app
+FROM openjdk:11.0.10-jre-slim AS zxing-app
 
 COPY --from=zxing-app-build --chown=root /zxing-app-build/build/libs/zxing-app-3.4.0-all.jar /
 
