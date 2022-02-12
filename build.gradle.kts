@@ -1,14 +1,14 @@
 plugins {
     application
-    id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 repositories {
     mavenCentral()
 }
 
-val zxingVersion = "3.4.0"
-val revision = "1"
+val zxingVersion = "3.4.1"
+val revision = "0"
 version = "${zxingVersion}_${revision}"
 
 application {
@@ -23,5 +23,10 @@ tasks {
     shadowJar {
         isPreserveFileTimestamps = false
         isReproducibleFileOrder = true
+    }
+
+    wrapper {
+        gradleVersion = "7.4"
+        distributionType = Wrapper.DistributionType.ALL
     }
 }
