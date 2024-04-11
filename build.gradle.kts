@@ -1,13 +1,13 @@
 plugins {
     application
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 repositories {
     mavenCentral()
 }
 
-val zxingVersion = "3.4.1"
+val zxingVersion = "3.5.3"
 val revision = "0"
 version = "${zxingVersion}_${revision}"
 
@@ -26,7 +26,7 @@ tasks {
     }
 
     wrapper {
-        gradleVersion = "7.4"
+        gradleVersion = "8.7"
         distributionType = Wrapper.DistributionType.ALL
     }
 }
